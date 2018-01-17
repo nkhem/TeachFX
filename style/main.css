@@ -40,6 +40,6 @@
 .icons {
 	/*width: 150px;*/
 	color: magenta;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 }
