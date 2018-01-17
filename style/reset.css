@@ -4,6 +4,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, em, ol, ul, li {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 article, nav, section {

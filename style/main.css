@@ -1,4 +1,4 @@
-#iPhone div {
+.iPhone div {
 	width: 250px;
 	height: 500px;
 	position: absolute;
@@ -9,7 +9,7 @@
 	margin-top: -250px;
 }
 
-#iPhoneImg img{
+.iPhoneImg img{
 	max-height: 100%;
 	
 }
@@ -18,8 +18,28 @@
 	font-style: italic;
 }
 
-#iPhone h2 {
+.iPhone h2 {
 	position: relative;
 	
 	color: magenta;
+}
+
+.iPhoneContents {
+	color: white;
+}
+
+.iPhoneContents i:hover {
+	color: #E94052;
+}
+
+.fa {
+	font-size: 24px;
+	margin: 
+}
+
+.icons {
+	width: 150px;
+	color: magenta;
+	display: flex;
+	justify-content: space-between;
 }
