@@ -1,4 +1,4 @@
-.iPhone div {
+.iphone div {
 	/*width: 250px;*/
 	height: 600px;
 	position: absolute;
@@ -9,7 +9,7 @@
 	margin-top: -300px;
 }
 
-.iPhoneImg img{
+.iphone-img img{
 	max-height: 100%;
 }
 
@@ -23,7 +23,7 @@
   }
 }
 
-#mainLogo {
+#main-logo {
 	display: none;
 	position: relative;
 	margin: 0 auto;
@@ -34,16 +34,16 @@
 	animation: fadeIn .5s ease-in 1 forwards;
 }
 
-.isPaused {
+.is-paused {
   animation-play-state: paused;
 }
 
-.iPhoneContents {
+.iphone-contents {
 	color: white;
 	width: 300px;;
 }
 
-.iPhoneContents i:hover {
+.iphone-contents i:hover {
 	color: #E94052;
 }
 

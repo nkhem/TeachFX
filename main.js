@@ -1,7 +1,16 @@
-let logoEl = document.getElementById("mainLogo");
+let logoEl = document.getElementById("main-logo");
+
+
 
 document.addEventListener("DOMContentLoaded", e => {
-    // document.getElementById('mainIcons').style.display = 'flex';
+    // var curImg = new Image();
+    // 
+    // curImg.src = "url to your image";
+    // curImg.onload = function(){
+    //     // do whatever here, add it to the background, append the image ect.
+    //     imgHolder.appendChild(curImg);   
+    // }
+    // document.getElementById('main-icons').style.display = 'flex';
       setTimeout(() => {
         logoEl.style.display = 'block';
         
