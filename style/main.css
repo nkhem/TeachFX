@@ -1,11 +1,25 @@
-#blankiPhone {
+#iPhone div {
+	width: 250px;
+	height: 500px;
 	position: absolute;
-	
 	left: 50%;
 	margin-left: -125px;
 	
 	top: 50%;
 	margin-top: -250px;
+}
+
+#iPhoneImg img{
+	max-height: 100%;
 	
-	height: 500px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+#iPhone h2 {
+	position: relative;
+	
+	color: magenta;
 }
