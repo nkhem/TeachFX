@@ -4,7 +4,7 @@
 	position: absolute;
 	left: 50%;
 	margin-left: -150px;
-	
+
 	top: 50%;
 	margin-top: -300px;
 }
@@ -38,7 +38,7 @@
   animation-play-state: paused;
 }
 
-.iphone-contents {
+.main-logo {
 	color: white;
 	width: 300px;;
 }
@@ -52,14 +52,19 @@
 }
 
 .main-btns {
-	width: 280px;
-	margin: 0 auto;
-	color: magenta;
+	border: 1px solid black;
+	width: 295px;
 	display: flex;
-	flex-direction: column;
+	justify-content: space-around;
 }
 
-.main-btns div{
-	display:flex;
-	justify-content: space-around;
+#start-btn, #stats-btn, #settings-btn{
+	position: relative;
+	margin-left: 0;
+	left:0;
+	margin-top: 460px;
+	top: 0;
+	font-size: 24px;
+	text-align: center;
+	color: white;
 }
