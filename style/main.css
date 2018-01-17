@@ -1,31 +1,32 @@
 .iPhone div {
-	width: 250px;
-	height: 500px;
+	/*width: 250px;*/
+	height: 600px;
 	position: absolute;
 	left: 50%;
-	margin-left: -125px;
+	margin-left: -150px;
 	
 	top: 50%;
-	margin-top: -250px;
+	margin-top: -300px;
 }
 
 .iPhoneImg img{
 	max-height: 100%;
-	
 }
 
 .italic {
 	font-style: italic;
 }
 
-.iPhone h2 {
+#mainLogo {
 	position: relative;
-	
-	color: magenta;
+	margin: 0 auto;
+	margin-top: 30%;
+	text-align: center;
 }
 
 .iPhoneContents {
 	color: white;
+	width: 300px;;
 }
 
 .iPhoneContents i:hover {
@@ -34,11 +35,10 @@
 
 .fa {
 	font-size: 24px;
-	margin: 
 }
 
 .icons {
-	width: 150px;
+	/*width: 150px;*/
 	color: magenta;
 	display: flex;
 	justify-content: space-between;
