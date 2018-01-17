@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", e => {
     //wait for blank iphone image to load before animations begin
     blankiPhoneImg.onload = () => {
         document.getElementsByClassName("iphone-img")[0].appendChild(blankiPhoneImg);
-        document.getElementsByClassName('main-btns')[0].style.display = 'flex'; 
         animateLogo();
     };
   }
@@ -34,14 +33,13 @@ let displayMainBtns = () => {
       clearInterval(currTicker);
     } else {
       let currBtnEl = document.getElementsByClassName('main-btns')[0].children[i];
+      currBtnEl.style.animation = 'fadeIn .5s ease-in 1 forwards';
       fadeIn(currBtnEl);
-      currBtnEl.style.color = 'white';
       i++;
     }
-  }, 700);
+  }, 100);
 };
 let fadeIn = element => {  
-  //fade logo in
   if (element.classList.contains('is-paused')){
     element.classList.remove('is-paused');
   }

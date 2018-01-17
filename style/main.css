@@ -53,7 +53,7 @@
 
 .main-btns {
 	width: 295px;
-	display: none;
+	display: flex;
 	justify-content: space-around;
 }
 
@@ -65,6 +65,7 @@
 	top: 0;
 	font-size: 24px;
 	text-align: center;
-	color: #00AAFF;
-	animation: fadeIn .5s ease-in 1 forwards;
+	color: white;
+	opacity: 0;
+	/*animation: fadeIn .5s ease-in 1 forwards;*/
 }
