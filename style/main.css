@@ -52,7 +52,6 @@
 }
 
 .main-btns {
-	border: 1px solid black;
 	width: 295px;
 	display: flex;
 	justify-content: space-around;
@@ -66,5 +65,6 @@
 	top: 0;
 	font-size: 24px;
 	text-align: center;
-	color: white;
+	color: #00AAFF;
+	animation: fadeIn .5s ease-in 1 forwards;
 }

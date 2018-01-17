@@ -7,11 +7,6 @@ document.addEventListener("DOMContentLoaded", e => {
     blankiPhoneImg.onload = () => {
         document.getElementsByClassName("iphone-img")[0].appendChild(blankiPhoneImg);   
         animateLogo();
-        
-        // let i = document.getElementsByClassName('main-icons')[0].childElementCount.
-        // setInterval(()=>{
-        //   document.getElementsByClassName('main-icons')[i].style.display = 'flex';  
-        // }, 700);
     };
   }
 );
@@ -19,22 +14,36 @@ document.addEventListener("DOMContentLoaded", e => {
 let animateLogo = () => {
   let logoEl = document.getElementById("main-logo");
   setTimeout(() => {
-    fadeElementIn(logoEl);
+    fadeIn(logoEl);
   }, 1000);
   
-  //wait until fadeElementIn is done plus 1 sec, then slide logoup
+  //wait until fadeIn is done plus 1 sec, then slide logoup
   logoEl.addEventListener("webkitAnimationEnd", () => {
     setTimeout(() => {
       slideElement(logoEl, 0, -150);
+      displayMainBtns();
     }, 1500);
   } ,false);
 };
-let fadeElementIn = logoEl => {
-  logoEl.style.display = 'block';
+let displayMainBtns = () => {
+  let i = 0;
+  let currTicker = setInterval(()=>{
+    if(i >= document.getElementsByClassName('main-btns')[0].childElementCount) {
+      clearInterval(currTicker);
+    } else {
+      let currBtnEl = document.getElementsByClassName('main-btns')[0].children[i];
+      fadeIn(currBtnEl);
+      currBtnEl.style.color = 'white';
+      i++;
+    }
+  }, 700);
+};
+let fadeIn = element => {
+  element.style.display = 'block';
   
   //fade logo in
-  if (logoEl.classList.contains('is-paused')){
-    logoEl.classList.remove('is-paused');
+  if (element.classList.contains('is-paused')){
+    element.classList.remove('is-paused');
   }
 };
 let slideElement = (slidingEl, xScrollDistance, yScrollDistance) => {
@@ -43,7 +52,7 @@ let slideElement = (slidingEl, xScrollDistance, yScrollDistance) => {
     let shouldScrollVertically = Math.abs(yScrollDistance) > 1;
     
     //end function if we've hit our destination
-    if(!(shouldScrollHorizontally || shouldScrollVertically)){
+    if(!shouldScrollHorizontally && !shouldScrollVertically){
       clearInterval(slideElement);
     }
     
