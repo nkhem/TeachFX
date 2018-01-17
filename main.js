@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", e => {
     blankiPhoneImg.onload = () => {
       console.log("image loaded");
         // do whatever here, add it to the background, append the image ect.
-        // document.getElementsByClassName("iphone-img")[0].appendChild(blankiPhoneImg);   
+        document.getElementsByClassName("iphone-img")[0].appendChild(blankiPhoneImg);   
     };
     
     document.getElementById('main-icons').style.display = 'flex';
