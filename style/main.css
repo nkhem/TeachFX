@@ -51,9 +51,15 @@
 	font-size: 100px;
 }
 
-.icons {
-	/*width: 150px;*/
+.main-btns {
+	width: 280px;
+	margin: 0 auto;
 	color: magenta;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+}
+
+.main-btns div{
+	display:flex;
+	justify-content: space-around;
 }
