@@ -53,7 +53,7 @@
 
 .main-btns {
 	width: 295px;
-	display: flex;
+	display: none;
 	justify-content: space-around;
 }
 

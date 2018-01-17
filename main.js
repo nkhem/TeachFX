@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", e => {
     
     //wait for blank iphone image to load before animations begin
     blankiPhoneImg.onload = () => {
-        document.getElementsByClassName("iphone-img")[0].appendChild(blankiPhoneImg);   
+        document.getElementsByClassName("iphone-img")[0].appendChild(blankiPhoneImg);
+        document.getElementsByClassName('main-btns')[0].style.display = 'flex'; 
         animateLogo();
     };
   }
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", e => {
 let animateLogo = () => {
   let logoEl = document.getElementById("main-logo");
   setTimeout(() => {
+    logoEl.style.display = 'block';
     fadeIn(logoEl);
   }, 1000);
   
@@ -38,9 +40,7 @@ let displayMainBtns = () => {
     }
   }, 700);
 };
-let fadeIn = element => {
-  element.style.display = 'block';
-  
+let fadeIn = element => {  
   //fade logo in
   if (element.classList.contains('is-paused')){
     element.classList.remove('is-paused');
