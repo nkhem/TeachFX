@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Analytics Page</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="bundle.js" defer></script>
+    <script type="text/javascript" src="./d3/linechart.js" defer></script>
 </head>
 <body>
   <div id="app"></div>
-  <!-- <script>
+  <script>
+    let start = () => {
+      console.log("starting!");
+      d3.select("body")
+        .append("p")
+        .text("new text!!!");
+    };
     start();
-  </script> -->
-  <script type="text/javascript" src="bundle.js"></script>
+  </script>
 </body>
 </html>
