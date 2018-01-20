@@ -21,8 +21,8 @@ class SimpleLineChart extends React.Component {
        <CartesianGrid strokeDasharray="3 3"/>
        <Tooltip/>
        <Legend />
-       <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
-       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+       <Line type="monotone" dataKey="pv" stroke="#FF4C79" activeDot={{r: 8}}/>
+       <Line type="monotone" dataKey="uv" stroke="#00BBFF" />
       </LineChart>
     );
   }
