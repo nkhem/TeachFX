@@ -7,6 +7,7 @@ class AnalyticsPage extends React.Component {
       <div>
         <BarChart data={[5,10,1,3]} size={[500,500]} />
         <p>{ this.props.dummyData[0].classTitle }</p>
+        <div id="container" />
       </div>
     );
   }
