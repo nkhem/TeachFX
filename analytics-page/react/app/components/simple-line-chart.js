@@ -1,29 +1,39 @@
 import React from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
-let tempData;
-
 class SimpleLineChart extends React.Component {
   // constructor(props){
   //   super(props);
   // }
-  generateMoreData(numTimes, isRecursing){
-    console.log(isRecursing, tempData);
-    if (numTimes === 0) return tempData;
-    tempData = isRecursing ? tempData : [];
-    tempData = tempData.concat(this.props.data);
-    this.generateMoreData(numTimes - 1, true);
-    for (var i = 0; i < tempData.length; i++) {
-      tempData[i].startDateTime = new Date(
-        2018, 12, 9, 4, 30, 43, 0
-      )
+  generateData(datumCount){
+    datumCount = (datumCount < 0) ? 1 + Math.floor(Math.random() * 50) : datumCount;
+    for (var i = 0; i < datumCount; i++) {
+      let teacherTalk = 20 + Math.floor(Math.random() * 80);
+      let studentTalk = Math.floor(Math.random() * (100 - teacherTalk));
+      let newDatum =       {
+              name: ['Art', 'History', 'Math'][Math.floor(Math.random() * 3)],
+              startDateTime: new Date(
+                2015 + Math.floor(Math.random() * 3),//year
+                1 + Math.floor(Math.random() * 12),//month
+                1 + Math.floor(Math.random() * 28),//date
+                1 + Math.floor(Math.random() * 12),//hour
+                Math.floor(Math.random() * 60),//min
+                Math.floor(Math.random() * 60),//sec
+                0//millisec
+              ),
+              teacherTalk,
+              studentTalk,
+              otherTalk: 100 - teacherTalk - studentTalk,
+            };
+            this.props.data.push(newDatum);
     }
-    return tempData;
+
+    return this.props.data;
   }
 
 	render () {
   	return (
-    	<LineChart width={600} height={300} data={this.generateMoreData(3, false)}
+    	<LineChart width={600} height={300} data={this.generateData(-1)}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        <XAxis dataKey="name"/>
        <YAxis/>
