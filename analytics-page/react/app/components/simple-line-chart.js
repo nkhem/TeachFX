@@ -37,22 +37,22 @@ class SimpleLineChart extends React.Component {
   	return (
     	<LineChart width={600} height={300} data={ data }
             margin={{top: 15, right: -30, left: 20, bottom: 5}}>
-        <XAxis dataKey="name" onMouseOver={e => console.log(e)}>
+        <XAxis dataKey="name"
+          label={{ value: '% of class time', angle: -90, position: 'insideLeft' }}
+          onMouseOver={e => console.log(e)}>
           <Label position="bottom" value="class date"/>
         </XAxis>
-        <YAxis>
-          <Label position="left" value="% of class time"/>
-        </YAxis>
+        <YAxis label={{ value: 'class date', position: 'outsideBottom' }} />
         <Tooltip/>
        {
-       //   <Legend width={100} wrapperStyle={{
-       //   top: 40,
-       //   right: 20,
-       //   backgroundColor: '#f5f5f5',
-       //   border: '1px solid #d5d5d5',
-       //   borderRadius: 3,
-       // }} />
-     }
+         //   <Legend width={100} wrapperStyle={{
+         //   top: 40,
+         //   right: 20,
+         //   backgroundColor: '#f5f5f5',
+         //   border: '1px solid #d5d5d5',
+         //   borderRadius: 3,
+         // }} />
+       }
        <Line type="monotone" dataKey="teacherTalk" stroke="#FF4C79" activeDot={{r: 8}}/>
        <Line type="monotone" dataKey="studentTalk" stroke="#00BBFF" />
        <Line type="monotone" dataKey="otherTalk" stroke="#C9C9C9" />
