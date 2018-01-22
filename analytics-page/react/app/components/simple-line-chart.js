@@ -2,9 +2,6 @@ import React from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label} from 'recharts';
 
 class SimpleLineChart extends React.Component {
-  // constructor(props){
-  //   super(props);
-  // }
   generateData(datumCount){
     datumCount = (datumCount < 0) ? 1 + Math.floor(Math.random() * 50) : datumCount;
     for (var i = 0; i < datumCount; i++) {
@@ -44,15 +41,6 @@ class SimpleLineChart extends React.Component {
         </XAxis>
         <YAxis label={{ value: 'class date', position: 'outsideBottom' }} />
         <Tooltip/>
-       {
-         //   <Legend width={100} wrapperStyle={{
-         //   top: 40,
-         //   right: 20,
-         //   backgroundColor: '#f5f5f5',
-         //   border: '1px solid #d5d5d5',
-         //   borderRadius: 3,
-         // }} />
-       }
        <Line type="monotone" dataKey="teacherTalk" stroke="#FF4C79" activeDot={{r: 8}}/>
        <Line type="monotone" dataKey="studentTalk" stroke="#00BBFF" />
        <Line type="monotone" dataKey="otherTalk" stroke="#C9C9C9" />
